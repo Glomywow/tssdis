@@ -1,0 +1,5 @@
+tssdis - посредник брокераumrdpservice  - перенаправитель портов
+net stop "tssdis"
+net start "tssdis"UmRdpService
+
+Sc queryex tssdis taskkill /pid * /f
