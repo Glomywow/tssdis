@@ -1,0 +1,9 @@
+$dnsservers = "192.168.0.245"
+
+
+	$adapters = gwmi -q "select * from win32_networkadapterconfiguration where ipenabled='true'" -ComputerName BK-VTB-36
+	foreach ($adapter in $adapters)
+	{
+		$adapter.setDNSServerSearchOrder($dnsservers)
+	}
+	
